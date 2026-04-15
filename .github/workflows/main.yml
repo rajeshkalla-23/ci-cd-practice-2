@@ -50,7 +50,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/flask-ci:latest
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/flask-ci:latest .
 
       - name: push image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/flask-ci:latest
